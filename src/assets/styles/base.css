@@ -1,0 +1,58 @@
+/* The integration's default injected base.css file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-primary {
+  @apply bg-slate-950;
+}
+.text-shadow {
+  text-shadow: 4px 4px #000;
+}
+.separator {
+  border-image-source: linear-gradient(to left,  #f3f4f6, #020617);
+  border-image-slice: 1;
+  background-image: radial-gradient(at top center, #f3f4f626, #020617, 60%);
+  height: 6rem;
+  width: 70%;
+  margin-inline: auto;
+}
+
+.tech-card {
+   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.03));
+   padding-block: 2rem;
+   border-top-width: 1px;
+   border-bottom-width: 1px;
+   border-color: #ffffff26;
+   animation: 35s slide infinite linear;
+}
+
+@keyframes slide {
+   from {
+      transform: translateX(0);
+   }
+   to {
+      transform: translateX(-100%);
+   }
+}
+
+.tech-modal {
+   background-image: linear-gradient(to bottom, #000, hsla(0, 0%, 0%, 0.9));
+   border: 2px solid #ffffff26;
+   animation: fade-in 0.5s forwards;
+}
+
+/*=============== Project Cards ===============*/
+.container {
+   transform: translateY(40px);
+   transition: transform ease-in-out 500ms;
+}
+
+.parent-container:hover .container {
+   transform: translateY(0);
+}
+
+.parent-container:hover .container .paragraph {
+   opacity: 1;
+   transition: opacity ease-in 300ms;
+}

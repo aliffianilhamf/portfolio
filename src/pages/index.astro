@@ -1,16 +1,24 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import ProfilePicture from "../components/ProfilePicture.astro";
+import Separator from "../components/Separator.astro";
+import About from "../components/About.astro";
+import Technologies from "../components/Technologies.astro";
+import Projects from "../components/Projects.astro";
+import Footer from "../components/Footer.astro";
+import Form from "../components/Form.jsx";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Alippwd | Portfolio">
+  <Navbar />
+  <main id="home" class="mt-16 scroll-mt-10">
+    <ProfilePicture />
+    <Separator />
+    <About />
+    <Technologies />
+    <Projects />
+    <Form client:visible />
+    <Footer />
+  </main>
+</Layout>

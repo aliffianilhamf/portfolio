@@ -1,0 +1,57 @@
+---
+import { info, socials } from "../utils/data";
+
+const { pathname } = Astro.url;
+---
+
+<nav
+  class="w-full h-16 bg-primary text-white flex items-center px-4 py-3 top-0 z-50 justify-between md:justify-between xs:justify-center fixed"
+>
+  <ul
+    class="justify-items-center xl:basis-[20%] md:basis-[28%] md:grid xs:hidden"
+    style={{
+      gridTemplateColumns: `repeat(${socials.length}, minmax(0,1fr))`,
+    }}
+  >
+    {
+      socials.map((social) => (
+        <li>
+          <a
+            target="_blank"
+            href={social.link}
+            class="text-2xl opacity-50 hover:opacity-100 duration-300 ease-in cursor-pointer"
+          >
+            <i class={social.logo} />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <ul
+    class="grid justify-items-center xl:basis-[20%] md:basis-[28%] sm:basis-[40%] xs:basis-[75%]"
+    style={{ gridTemplateColumns: `repeat(${info.length + 1}, minmax(0,1fr))` }}
+  >
+    {
+      pathname === "/" &&
+        info.map((item) => (
+          <li>
+            <a
+              href={`#${item.text.toLowerCase()}`}
+              class="opacity-70 hover:opacity-100 duration-300 text-[17px] font-semibold"
+            >
+              {item.text}
+            </a>
+          </li>
+        ))
+    }
+  </ul>
+  <ul
+    class="grid justify-items-center xl:basis-[10%] md:basis-[14%] sm:basis-[20%] xs:basis-[37.5%]"
+  >
+    <li>
+      <a href="#home" class="text-xl opacity-100 cursor-pointer font-medium"
+        >ALIPPWD</a
+      >
+    </li>
+  </ul>
+</nav>
