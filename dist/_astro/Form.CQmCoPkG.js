@@ -1,4 +1,4 @@
-import{r as x}from"./index.DhYZZe0J.js";import{S as y}from"./sweetalert2.esm.all.DOYwHpwi.js";var g={exports:{}},d={};/**
+import{r as x}from"./index.DhYZZe0J.js";import{S as y}from"./sweetalert2.esm.all.D3pEHXw3.js";var g={exports:{}},d={};/**
  * @license React
  * react-jsx-runtime.production.min.js
  *
