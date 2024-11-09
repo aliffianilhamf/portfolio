@@ -36,6 +36,11 @@ export const technologies = [
     logo: "bx bxl-javascript",
   },
   {
+    text: "C++",
+    logo: "bx bxl-c-plus-plus",
+  },
+
+  {
     text: "Django",
     logo: "bx bxl-django",
   },
@@ -97,6 +102,14 @@ export const projects = [
     image: "image-alippwd-portfolio",
     color: "#146866",
     repository: "portfolio",
+  },
+  {
+    title: "Tracking Duration of Person",
+    description:
+      "Tracking duration of person in indoor environtment is a system built to calculate the duration of a person in a room. some of the systems I use are to detect people using SSDMobileNet, while for recognition using YuNet and Sface, this system also implements Tracking to maintain the stability of the person's bounding box when walking.",
+    image: "image-tracking-duration",
+    color: "#146869",
+    repository: "person_detection/tree/object_tracking",
   },
 ];
 
